@@ -10,6 +10,7 @@ import { PagesComponent } from './pages.component';
 
 
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SharedModule } from '../shared/shared.module';
     ],
     imports: [
         SharedModule,
-        PagesRoutingModule
+        PagesRoutingModule,
+        FormsModule
     ]
 })
 

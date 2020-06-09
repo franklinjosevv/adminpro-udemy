@@ -1,0 +1,18 @@
+<h5 class="card-title">{{ leyenda }}</h5>
+
+<div class="input-group ">
+    <div class="input-group-prepend ">
+        <button class="btn btn-primary " type="button " (click)="restarPorcentaje()" id="button-addon3 ">
+            <i class="mdi mdi-minus "></i>
+            
+        </button>
+    </div>
+
+    <input type="number" class="form-control " placeholder=" " aria-label="Recipient 's username with two button addons" aria-describedby="button-addon4" name="porcentaje" [(ngModel)]="porcentaje" (ngModelChange)="onChangest( $event )" min="0" max="100">
+
+    <div class=" input-group-append ">
+        <button class="btn btn-primary " type="button " (click)="sumarPorcentaje() " id="button-addon4 ">
+            <i class="mdi mdi-plus "></i>    
+        </button>
+    </div>
+</div>

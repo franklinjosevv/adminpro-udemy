@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressComponent implements OnInit {
 
-  porcentaje: number = 10;
+  porcentajeAzul: number = 10;
+  porcentajeVerde: number = 40;
   nombre: string = 'franklin';
 
   constructor() { }
@@ -16,7 +17,16 @@ export class ProgressComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sumarPorcentaje(): void{
+  actualizarAzul( event: number ) {
+    this.porcentajeAzul = event;
+    console.log('evento : ', event );
+  }
+  actualizarVerde( event: number ) {
+    this.porcentajeVerde = event;
+    console.log('evento : ', event );
+  }
+
+ /*sumarPorcentaje(): void{
     if (this.porcentaje >= 100){
       this.porcentaje = 100;
       return;
@@ -38,6 +48,6 @@ export class ProgressComponent implements OnInit {
     }
     this.porcentaje -= 5;
     console.log(this.porcentaje);
-  }
+  }*/
 
 }

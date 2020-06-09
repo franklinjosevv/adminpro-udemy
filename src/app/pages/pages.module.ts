@@ -11,6 +11,7 @@ import { PagesComponent } from './pages.component';
 
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 
 
 @NgModule({
@@ -18,13 +19,15 @@ import { FormsModule } from '@angular/forms';
         DashboardComponent,
         ProgressComponent,
         Graficas1Component,
-        PagesComponent
+        PagesComponent,
+        IncrementadorComponent
     ],
     exports: [
         DashboardComponent,
         ProgressComponent,
         Graficas1Component,
         PagesComponent,
+        IncrementadorComponent
     ],
     imports: [
         SharedModule,

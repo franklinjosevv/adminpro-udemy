@@ -2,11 +2,17 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-
-                <h5 class="card-title">Barra de progreso</h5>
+                <h5 class="card-title">Barra de progreso {{ porcentajeAzul }} {{ porcentajeVerde }}</h5>
 
                 <div class=" progress ">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar " [attr.ariavaluenow]="porcentaje " aria-valuenow="100 " ria-valuemin="0 " aria-valuemax="100 " [style.width]="porcentaje + '%' " style="width:
+                    <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar " [attr.ariavaluenow]="porcentajeAzul" aria-valuenow="100 " ria-valuemin="0 " aria-valuemax="100 " [style.width]="porcentajeAzul + '%' " style="width:
+                    100% "></div>
+                </div>
+
+                <br>
+
+                <div class=" progress ">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar " [attr.ariavaluenow]="porcentajeVerde" aria-valuenow="100 " ria-valuemin="0 " aria-valuemax="100 " [style.width]="porcentajeVerde + '%' " style="width:
                     100% "></div>
                 </div>
 
@@ -18,8 +24,8 @@
     <div class="col-6 ">
         <div class="card ">
             <div class="card-body ">
-
-                <div class="input-group ">
+                <app-incrementador (cambioValor)="actualizarAzul( $event)" nombre="porcentaje azul" [porcentaje]="porcentajeAzul"></app-incrementador>
+                <!--<div class="input-group ">
                     <div class="input-group-prepend ">
                         <button class="btn btn-primary " type="button " (click)="restarPorcentaje()" id="button-addon3 ">
                             <i class="mdi mdi-minus "></i>
@@ -31,17 +37,16 @@
                         <button class="btn btn-primary " type="button " (click)="sumarPorcentaje() " id="button-addon4 ">
                             <i class="mdi mdi-plus "></i>    
                         </button>
-                    </div>
-                </div>
-
+                    </div>-->
             </div>
         </div>
     </div>
+
     <div class="col-6 ">
         <div class="card ">
             <div class="card-body ">
 
-                Texto 2
+                <app-incrementador (cambioValor)="actualizarVerde( $event)" nombre="porcentaje verde" [porcentaje]="porcentajeVerde"></app-incrementador>
 
             </div>
         </div>
